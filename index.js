@@ -1,6 +1,4 @@
-/** uncomment one of these **/
 import OpenAI from "openai" 
-// import { HfInference } from '@huggingface/inference'
 
 const openAIApiKey = process.env.OPENAI_API_KEY
 const jokeEl = document.getElementById("joke-display")
