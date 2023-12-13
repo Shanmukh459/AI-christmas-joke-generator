@@ -1,10 +1,12 @@
 import OpenAI from "openai" 
 
-const openAIApiKey = process.env.OPENAI_API_KEY
+
+const openAIApiKey = import.meta.env.VITE_OPENAI_API_KEY
+
 const jokeEl = document.getElementById("joke-display")
 
 
-const openai = new OpenAI({ openAIApiKey, dangerouslyAllowBrowser: true});
+const openai = new OpenAI({ apiKey: openAIApiKey, dangerouslyAllowBrowser: true});
 
 async function main() {
   const completion = await openai.chat.completions.create({
