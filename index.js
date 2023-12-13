@@ -1,4 +1,4 @@
-import OpenAI from "/node_modules/openai" 
+import {OpenAI} from "openai" 
 
 
 const openAIApiKey = import.meta.env.VITE_OPENAI_API_KEY
